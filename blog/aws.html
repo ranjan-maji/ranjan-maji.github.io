@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 32px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .header-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .fa {
+            margin-right: 8px;
+        }
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            background-color: #007BFF;
+            padding: 10px;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="/blog/full-article.html">Home</a>
+            <a href="daily-update.html">Daily Update</a>
+            <a href="microservices.html">Microservices</a>
+            <a href="aws.html">AWS</a>
+            <a href="solution.html">Solution</a>
+        </div>
+        <h1>Amazon Web Services (AWS)</h1>
+        <div class="article-meta">
+            <i class="fa fa-calendar-alt"></i> June 7, 2024
+        </div>
+
+        <h2>Overview of AWS</h2>
+        <p>
+            Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform, offering over 200 fully featured services from data centers globally. AWS is used by millions of customers, including the fastest-growing startups, largest enterprises, and leading government agencies, to lower costs, become more agile, and innovate faster.
+        </p>
+
+        <h2>Core Services</h2>
+        <h3>1. Compute</h3>
+        <p>
+            AWS offers a variety of compute services tailored to different needs:
+            <ul>
+                <li><strong>Amazon EC2:</strong> Provides scalable virtual servers.</li>
+                <li><strong>Amazon ECS:</strong> A container orchestration service.</li>
+                <li><strong>AWS Lambda:</strong> Allows you to run code without provisioning or managing servers.</li>
+            </ul>
+        </p>
+
+        <h3>2. Storage</h3>
+        <p>
+            Storage services in AWS cater to different requirements:
+            <ul>
+                <li><strong>Amazon S3:</strong> Scalable object storage.</li>
+                <li><strong>Amazon EBS:</strong> Block storage for use with Amazon EC2.</li>
+                <li><strong>Amazon Glacier:</strong> Low-cost archival storage.</li>
+            </ul>
+        </p>
+
+        <h3>3. Database</h3>
+        <p>
+            AWS provides various database services:
+            <ul>
+                <li><strong>Amazon RDS:</strong> Managed relational database service.</li>
+                <li><strong>Amazon DynamoDB:</strong> NoSQL database service.</li>
+                <li><strong>Amazon Redshift:</strong> Data warehousing service.</li>
+            </ul>
+        </p>
+
+        <h3>4. Networking</h3>
+        <p>
+            Networking services in AWS include:
+            <ul>
+                <li><strong>Amazon VPC:</strong> Isolated cloud resources.</li>
+                <li><strong>AWS Direct Connect:</strong> Dedicated network connection to AWS.</li>
+                <li><strong>Amazon Route 53:</strong> Scalable DNS and domain name registration.</li>
+            </ul>
+        </p>
+
+        <h3>5. Security</h3>
+        <p>
+            AWS offers comprehensive security services:
+            <ul>
+                <li><strong>AWS Identity and Access Management (IAM):</strong> Secure control of AWS services and resources.</li>
+                <li><strong>AWS Key Management Service (KMS):</strong> Managed service for creating and controlling encryption keys.</li>
+                <li><strong>AWS Shield:</strong> Managed DDoS protection service.</li>
+            </ul>
+        </p>
+
+        <h2>Benefits of AWS</h2>
+        <p>
+            <strong>1. Scalability:</strong> AWS allows you to scale your infrastructure up or down based on demand.
+        </p>
+        <p>
+            <strong>2. Cost-Effectiveness:</strong> AWS offers a pay-as-you-go pricing model, which helps manage costs effectively.
+        </p>
+        <p>
+            <strong>3. Flexibility:</strong> AWS provides a wide range of services and tools, allowing you to choose the best solution for your needs.
+        </p>
+        <p>
+            <strong>4. Global Reach:</strong> AWS has a global network of data centers, enabling you to deploy applications in multiple regions worldwide.
+        </p>
+        <p>
+            <strong>5. Security:</strong> AWS offers advanced security features to protect your data and applications.
+        </p>
+
+        <h2>Popular Use Cases</h2>
+        <h3>1. Web Hosting</h3>
+        <p>
+            AWS provides reliable, scalable, and low-cost web hosting solutions. Services like Amazon S3, Amazon CloudFront, and Amazon EC2 are commonly used for hosting web applications.
+        </p>
+
+        <h3>2. Big Data and Analytics</h3>
+        <p>
+            AWS offers a suite of services for big data processing and analytics, including Amazon EMR, AWS Glue, and Amazon Athena. These services help you analyze and process vast amounts of data quickly and cost-effectively.
+        </p>
+
+        <h3>3. Machine Learning and AI</h3>
+        <p>
+            AWS provides various machine learning and AI services, such as Amazon SageMaker, AWS Deep Learning AMIs, and Amazon Comprehend, enabling you to build, train, and deploy machine learning models at scale.
+        </p>
+
+        <h3>4. Disaster Recovery</h3>
+        <p>
+            AWS offers disaster recovery solutions to ensure business continuity in case of a disaster. Services like Amazon RDS, Amazon S3, and AWS Backup are used to implement robust disaster recovery plans.
+        </p>
+
+        <h3>5. IoT</h3>
+        <p>
+            AWS IoT services allow you to connect, manage, and analyze data from IoT devices. Services like AWS IoT Core, AWS IoT Greengrass, and AWS IoT Analytics help you build IoT applications and solutions.
+        </p>
+
+        <a href="/blog/full-article.html" class="back-link"><i class="fa fa-arrow-left"></i> Back to Home</a>
+    </div>
+</body>
+</html>
