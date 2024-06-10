@@ -5,266 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            font-size: 32px;
-            color: #007BFF;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2 {
-            font-size: 24px;
-            color: #0056b3;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-        p, pre {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.8;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 18px;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .header-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .fa {
-            margin-right: 8px;
-        }
-        .article-meta {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            background-color: #007BFF;
-            padding: 10px;
-            border-radius: 8px;
-            flex-wrap: wrap;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 5px;
-        }
-        .navbar a:hover {
-            background-color: #0056b3;
-            border-radius: 4px;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            p, pre {
-                font-size: 16px;
-            }
-            .navbar a {
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-            p, pre {
-                font-size: 14px;
-            }
-            .navbar a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-    </style> -->
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            font-size: 32px;
-            color: #007BFF;
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 18px;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .header-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .fa {
-            margin-right: 8px;
-        }
-        .article-meta {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            background-color: #007BFF;
-            padding: 10px;
-            border-radius: 8px;
-            flex-wrap: wrap;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 5px;
-        }
-        .navbar a:hover {
-            background-color: #0056b3;
-            border-radius: 4px;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
-            }
-            p {
-                font-size: 16px;
-            }
-            .navbar a {
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-            p {
-                font-size: 14px;
-            }
-            .navbar a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
+        /* CSS styles */
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Navigation Bar -->
         <div class="navbar">
+            <!-- Navigation Links -->
             <a href="/blog/full-article.html">Home</a>
             <a href="daily-update.html">Daily Update</a>
             <a href="microservices.html">Microservices</a>
             <a href="aws.html">AWS</a>
             <a href="solution.html">Solution</a>
         </div>
+
+        <!-- Main Content -->
         <h1>AWS Solutions</h1>
         <div class="article-meta">
             <i class="fa fa-calendar-alt"></i> June 7, 2024
         </div>
 
+        <!-- Step-by-Step Guide to Setup Nginx and SSL -->
         <h2>Step-by-Step Guide to Setup Nginx and SSL</h2>
 
+        <!-- Step 1: Install Nginx -->
         <h2>1. Install Nginx</h2>
         <p>If you haven't already installed Nginx, you can do so by running the following commands:</p>
         <pre>sudo apt update
 sudo apt install nginx</pre>
 
+        <!-- Step 2: Verify Firewall Settings -->
         <h2>2. Verify Firewall Settings</h2>
         <p>Ensure that your firewall allows HTTP (80) and HTTPS (443) traffic. You can allow Nginx Full profile:</p>
         <pre>sudo ufw allow 'Nginx Full'</pre>
 
+        <!-- Step 3: Install Certbot -->
         <h2>3. Install Certbot</h2>
         <p>Certbot is available in the default Ubuntu repositories. Install it using the following command:</p>
         <pre>sudo apt install certbot python3-certbot-nginx</pre>
 
+        <!-- Step 4: Generate a Self-Signed SSL Certificate -->
         <h2>4. Generate a Self-Signed SSL Certificate</h2>
         <p>You can generate a self-signed SSL certificate using OpenSSL. Run the following command:</p>
         <pre>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt</pre>
 
+        <!-- Step 5: Test Nginx Configuration -->
         <h2>5. Test Nginx Configuration</h2>
         <p>After configuring Nginx, it's essential to test the configuration for any syntax errors:</p>
         <pre>sudo nginx -t</pre>
         <p>If there are no errors, reload Nginx:</p>
         <pre>sudo systemctl reload nginx</pre>
 
+        <!-- Step 6: Edit Nginx Configuration -->
         <h2>6. Edit Nginx Configuration</h2>
         <p>Next, you need to edit your nginx configuration file to remove the reference to options-ssl-nginx.conf. Typically, this file is located in <code>/etc/nginx/sites-enabled/default</code>, but it might be different based on your setup. Open the file for editing:</p>
         <pre>sudo nano /etc/nginx/sites-enabled/default</pre>
 
+        <!-- Configuration Example -->
         <h2>Configuration Example:</h2>
         <pre>
 server {
@@ -291,6 +90,7 @@ server {
 }
 </pre>
 
+        <!-- Updated Configuration -->
         <h2>Updated Configuration:</h2>
         <pre>
 server {
@@ -318,20 +118,25 @@ server {
 }
 </pre>
 
+        <!-- Step 7: Test Nginx Configuration -->
         <h2>7. Test Nginx Configuration</h2>
         <p>Before restarting nginx, it's a good practice to test the configuration for syntax errors:</p>
         <pre>sudo nginx -t</pre>
 
+        <!-- Step 8: Restart Nginx -->
         <h2>8. Restart Nginx</h2>
         <p>If the configuration test is successful, restart nginx to apply the changes:</p>
         <pre>sudo systemctl restart nginx</pre>
 
+        <!-- Step 9: Install pm2 Globally -->
         <h2>9. Install pm2 Globally</h2>
         <p>Once you have Node.js and npm installed, you can install pm2 globally by running the following command:</p>
         <pre>npm install -g pm2
 sudo npm install -g pm2</pre>
 
+        <!-- Back to Home Link -->
         <a href="/blog/full-article.html" class="back-link"><i class="fa fa-arrow-left"></i> Back to Home</a>
     </div>
 </body>
 </html>
+
