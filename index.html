@@ -5,10 +5,13 @@
   <title>Ranjan Maji — Backend Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Ranjan Maji — Backend Developer (Node.js, MongoDB, AWS)" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
 
+  <!-- Use CDN CSS (guaranteed to load if you have internet) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Inline styles (ensures CSS works even if external files fail) -->
   <style>
     :root {
       --bg-color: #ffffff;
@@ -20,14 +23,20 @@
       --bg-color: #121212;
       --text-color: #f5f5f5;
       --card-bg: #1e1e1e;
-      --overlay-bg: rgba(255, 255, 255, 0.15);
+      --overlay-bg: rgba(255, 255, 255, 0.12);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg-color);
       color: var(--text-color);
-      transition: background 0.4s, color 0.4s;
+      transition: background 0.35s, color 0.35s;
     }
 
     nav.navbar {
@@ -44,14 +53,15 @@
       margin-bottom: 25px;
       transform: translateY(20px);
       opacity: 0;
-      animation: fadeInUp 1s forwards;
+      animation: fadeInUp 0.9s forwards;
     }
 
     .gallery-card img {
       width: 100%;
       height: 230px;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.45s ease;
+      display:block;
     }
 
     .gallery-card:hover img { transform: scale(1.05); }
@@ -62,13 +72,13 @@
       width: 100%; height: 100%;
       background: var(--overlay-bg);
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.45s ease;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       font-size: 18px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .gallery-card:hover .gallery-overlay { opacity: 1; }
@@ -78,41 +88,34 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Modal smooth entrance (works with bootstrap .show) */
     .modal.fade .modal-dialog {
       transform: translateY(30px);
       opacity: 0;
-      transition: all 0.4s ease-out;
+      transition: all 0.35s ease-out;
     }
     .modal.show .modal-dialog {
       transform: translateY(0);
       opacity: 1;
     }
 
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 20px 0;
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .theme-toggle {
-      border: none;
-      background: none;
-      font-size: 20px;
-      cursor: pointer;
-      color: var(--text-color);
-      transition: color 0.3s;
+    footer { background: #111; color: #fff; padding: 20px 0; margin-top: 30px; text-align:center; }
+    .theme-toggle { border: none; background: none; font-size: 18px; cursor: pointer; color: var(--text-color); }
+    header.py-5 { background: transparent; }
+    .text-muted { color: var(--text-color) !important; opacity: .7; }
+    /* small responsive tweak */
+    @media (max-width: 576px) {
+      .gallery-card img { height:160px; }
     }
   </style>
 </head>
 
 <body>
   <!-- NAV -->
-  <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom shadow-sm">
     <div class="container">
       <a class="navbar-brand font-weight-bold" href="#">Ranjan Maji</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -124,10 +127,8 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item">
-            <button id="themeToggle" class="theme-toggle ml-3" title="Toggle Theme">
-              <i class="fa fa-moon-o"></i>
-            </button>
+          <li class="nav-item ml-2">
+            <button id="themeToggle" class="theme-toggle" title="Toggle Theme"><i id="themeIcon" class="fa fa-moon-o"></i></button>
           </li>
         </ul>
       </div>
@@ -136,20 +137,19 @@
 
   <!-- HEADER -->
   <header class="text-center py-5">
-    <img src="images/ban661.jpg" alt="Ranjan Maji" class="rounded-circle mb-3" width="140" height="140">
+    <!-- placeholder image (replace with your ./images/ban661.jpg if you have it locally) -->
+    <img src="https://placehold.co/140x140?text=R" alt="Ranjan Maji" class="rounded-circle mb-3" width="140" height="140">
     <h2>Ranjan Maji</h2>
     <p class="text-muted mb-1">Backend Developer — Node.js | MongoDB | AWS</p>
-    <p>Detail-oriented Software Engineer with 3+ years of experience building scalable backend systems and APIs.</p>
+    <p class="text-muted">Detail-oriented Software Engineer with 3+ years of experience building scalable backend systems and APIs.</p>
   </header>
 
   <!-- ABOUT -->
   <section id="about" class="container">
     <div class="section-head"><h3>About Me</h3></div>
-    <p>
-      Hi, I'm <strong>Ranjan Maji</strong>, a backend developer specializing in Node.js, Express, MongoDB, and AWS.
+    <p>Hi, I'm <strong>Ranjan Maji</strong>, a backend developer specializing in Node.js, Express, MongoDB, and AWS.
       I build scalable APIs and deploy high-performance applications. I enjoy problem-solving and improving
-      software efficiency in agile environments.
-    </p>
+      software efficiency in agile environments.</p>
   </section>
 
   <!-- EXPERIENCE -->
@@ -157,123 +157,157 @@
     <div class="section-head"><h3>Experience</h3></div>
 
     <h5>BrandWise Tech Private Limited — Software Engineer</h5>
-    <small>April 2024 – Present</small>
+    <small class="text-muted d-block mb-2">April 2024 – Present</small>
     <ul>
       <li><strong>Ubayurved Management:</strong> Scalable backend (Node.js + Express) with Twilio integration, AWS deployment, and React + Redux admin dashboard.</li>
       <li><strong>Brandroute Media:</strong> Influencer management backend with real-time analytics dashboards using React.js and AWS hosting.</li>
       <li><strong>Trademaza:</strong> Social platform for investors with MongoDB Atlas and RESTful APIs for analytics and admin moderation.</li>
     </ul>
 
-    <h5>Techxi Solution LLP — Software Engineer</h5>
-    <small>Dec 2022 – Apr 2024</small>
+    <h5 class="mt-3">Techxi Solution LLP — Software Engineer</h5>
+    <small class="text-muted d-block mb-2">Dec 2022 – Apr 2024</small>
     <ul>
       <li><strong>FreezeBooking:</strong> REST API-based booking system using Node.js + MySQL, AWS EC2 + CloudFront deployment.</li>
       <li><strong>GE Backend:</strong> Loyalty system backend (Node.js + PostgreSQL + AWS RDS) with optimized point redemption.</li>
     </ul>
 
-    <h5>Technoplat Pvt Ltd — Backend Developer</h5>
-    <small>Jun 2022 – Nov 2022</small>
+    <h5 class="mt-3">Technoplat Pvt Ltd — Backend Developer</h5>
+    <small class="text-muted d-block mb-2">Jun 2022 – Nov 2022</small>
     <p>Developed hospital management backend using Node.js + MongoDB, deployed on AWS EC2 for scalability.</p>
 
-    <h5>Digital Computer System Pvt Ltd — Software Associate</h5>
-    <small>Aug 2021 – Jan 2022</small>
+    <h5 class="mt-3">Digital Computer System Pvt Ltd — Software Associate</h5>
+    <small class="text-muted d-block mb-2">Aug 2021 – Jan 2022</small>
     <p>Built billing software backend using Node.js and MongoDB with RESTful APIs.</p>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="container">
     <div class="section-head"><h3>Technical Skills</h3></div>
-    <p>
-      Node.js (Express) • REST APIs • MongoDB • MySQL • PostgreSQL • React.js • Redux Toolkit • Tailwind CSS •
-      AWS (EC2, S3, RDS, CloudFront, Route53) • Twilio Integration • Docker • Nginx • SOAP UI
-    </p>
+    <p>Node.js (Express) • REST APIs • MongoDB • MySQL • PostgreSQL • React.js • Redux Toolkit • Tailwind CSS •
+      AWS (EC2, S3, RDS, CloudFront, Route53) • Twilio Integration • Docker • Nginx • SOAP UI</p>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="container">
     <div class="section-head"><h3>Company Projects</h3></div>
     <div class="row">
+      <!-- six project placeholders; replace src with ./images/g1.jpg etc. if you add local images -->
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p1">
-          <img src="https://placehold.co/400x230" alt="Ubayurved Management">
+        <div class="gallery-card" data-toggle="modal" data-target="#p1" style="animation-delay:0s;">
+          <img src="https://placehold.co/400x230?text=Ubayurved" alt="Ubayurved Management">
           <div class="gallery-overlay">Ubayurved Management</div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p2">
-          <img src="https://placehold.co/400x230" alt="Brandroute Media">
+        <div class="gallery-card" data-toggle="modal" data-target="#p2" style="animation-delay:.12s;">
+          <img src="https://placehold.co/400x230?text=Brandroute" alt="Brandroute Media">
           <div class="gallery-overlay">Brandroute Media</div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p3">
-          <img src="https://placehold.co/400x230" alt="Trademaza">
+        <div class="gallery-card" data-toggle="modal" data-target="#p3" style="animation-delay:.24s;">
+          <img src="https://placehold.co/400x230?text=Trademaza" alt="Trademaza">
           <div class="gallery-overlay">Trademaza</div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p4">
-          <img src="https://placehold.co/400x230" alt="FreezeBooking">
+        <div class="gallery-card" data-toggle="modal" data-target="#p4" style="animation-delay:.36s;">
+          <img src="https://placehold.co/400x230?text=FreezeBooking" alt="FreezeBooking">
           <div class="gallery-overlay">FreezeBooking</div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p5">
-          <img src="https://placehold.co/400x230" alt="GE Backend">
+        <div class="gallery-card" data-toggle="modal" data-target="#p5" style="animation-delay:.48s;">
+          <img src="https://placehold.co/400x230?text=GE+Backend" alt="GE Backend">
           <div class="gallery-overlay">GE Backend</div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p6">
-          <img src="https://placehold.co/400x230" alt="Hospital Management">
+        <div class="gallery-card" data-toggle="modal" data-target="#p6" style="animation-delay:.6s;">
+          <img src="https://placehold.co/400x230?text=Hospital" alt="Hospital Management">
           <div class="gallery-overlay">Hospital Management</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MODALS -->
-  <div class="modal fade" id="p1"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>Ubayurved Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-      <p>Node.js backend with Twilio integration, AWS deployment, and React dashboard.</p>
-      <p><strong>Tech Stack:</strong> Node.js, Express, React, Redux Toolkit, AWS, Twilio</p>
-    </div></div></div></div>
+  <!-- MODALS (project details) -->
+  <div class="modal fade" id="p1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Ubayurved Management</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+        <p>Node.js backend with Twilio integration, AWS deployment, and React dashboard.</p>
+        <p><strong>Tech Stack:</strong> Node.js, Express, React, Redux Toolkit, AWS, Twilio</p>
+      </div>
+    </div></div>
+  </div>
 
-  <div class="modal fade" id="p2"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>Brandroute Media</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-      <p>Influencer management system with real-time analytics and AWS hosting.</p>
-      <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, AWS, React, Redux</p>
-    </div></div></div></div>
+  <div class="modal fade" id="p2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Brandroute Media</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+        <p>Influencer management system with real-time analytics and AWS hosting.</p>
+        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, AWS, React, Redux</p>
+      </div>
+    </div></div>
+  </div>
 
-  <div class="modal fade" id="p3"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>Trademaza</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-      <p>Social platform for investors using MongoDB Atlas and REST APIs.</p>
-      <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB Atlas, AWS</p>
-    </div></div></div></div>
+  <div class="modal fade" id="p3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Trademaza</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+        <p>Social platform for investors using MongoDB Atlas and REST APIs.</p>
+        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB Atlas, AWS</p>
+      </div>
+    </div></div>
+  </div>
 
-  <div class="modal fade" id="p4"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>FreezeBooking</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> Techxi Solution LLP</p>
-      <p>Booking API system built with Node.js + MySQL, deployed on AWS EC2 + CloudFront.</p>
-      <p><strong>Tech Stack:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
-    </div></div></div></div>
+  <div class="modal fade" id="p4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">FreezeBooking</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> Techxi Solution LLP</p>
+        <p>Booking API system built with Node.js + MySQL, deployed on AWS EC2 + CloudFront.</p>
+        <p><strong>Tech Stack:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
+      </div>
+    </div></div>
+  </div>
 
-  <div class="modal fade" id="p5"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>GE Backend</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> Techxi Solution LLP</p>
-      <p>Loyalty system backend with PostgreSQL and AWS RDS optimization.</p>
-      <p><strong>Tech Stack:</strong> Node.js, PostgreSQL, AWS RDS</p>
-    </div></div></div></div>
+  <div class="modal fade" id="p5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">GE Backend</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> Techxi Solution LLP</p>
+        <p>Loyalty system backend with PostgreSQL and AWS RDS optimization.</p>
+        <p><strong>Tech Stack:</strong> Node.js, PostgreSQL, AWS RDS</p>
+      </div>
+    </div></div>
+  </div>
 
-  <div class="modal fade" id="p6"><div class="modal-dialog modal-lg"><div class="modal-content">
-    <div class="modal-header"><h5>Hospital Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
-    <div class="modal-body"><p><strong>Company:</strong> Technoplat Pvt Ltd / Digital Computer System</p>
-      <p>Hospital & billing backend with Node.js + MongoDB, AWS EC2 deployment.</p>
-      <p><strong>Tech Stack:</strong> Node.js, MongoDB, AWS EC2</p>
-    </div></div></div></div>
+  <div class="modal fade" id="p6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Hospital Management</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
+      <div class="modal-body">
+        <p><strong>Company:</strong> Technoplat Pvt Ltd / Digital Computer System</p>
+        <p>Hospital & billing backend with Node.js + MongoDB, AWS EC2 deployment.</p>
+        <p><strong>Tech Stack:</strong> Node.js, MongoDB, AWS EC2</p>
+      </div>
+    </div></div>
+  </div>
 
   <!-- EDUCATION -->
   <section id="education" class="container">
@@ -298,29 +332,45 @@
     <p>© <span id="year"></span> Ranjan Maji. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <!-- JS: jQuery, Popper, Bootstrap (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
   <script>
     // Year
     document.getElementById('year').innerText = new Date().getFullYear();
 
-    // Theme Toggle with Local Storage
+    // Theme Toggle with Local Storage + initial icon set
     const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
 
-    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
-    else if (prefersDark) document.documentElement.setAttribute('data-theme', 'dark');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    // set initial icon
+    function updateThemeIcon() {
+      const current = document.documentElement.getAttribute('data-theme');
+      themeIcon.className = current === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+    }
+    updateThemeIcon();
 
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      themeToggle.innerHTML = newTheme === 'dark'
-        ? '<i class="fa fa-sun-o"></i>'
-        : '<i class="fa fa-moon-o"></i>';
+      updateThemeIcon();
     });
+
+    // if you see CSS not applying, open DevTools (F12) -> Network and look for failed resource loads (404)
   </script>
 </body>
 </html>
