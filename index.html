@@ -8,222 +8,319 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
+
   <style>
-    body { font-family: 'Poppins', sans-serif; color:#222; }
-    .section-head { margin:40px 0 20px; text-align:center; }
-    .gallery-card { position:relative; overflow:hidden; border-radius:10px; margin-bottom:25px; }
-    .gallery-card img { width:100%; height:230px; object-fit:cover; transition:transform .4s; }
-    .gallery-card:hover img { transform:scale(1.05); }
-    .gallery-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
-      opacity:0; transition:opacity .4s; display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px; font-weight:500;}
-    .gallery-card:hover .gallery-overlay { opacity:1; cursor:pointer; }
-    .modal-header { background:#222; color:#fff; border-bottom:none; }
-    .modal-body { padding:25px; }
-    .modal-body h5 { font-weight:600; }
-    footer { background:#111; color:#fff; padding:20px 0; margin-top:30px; text-align:center; }
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222;
+      --card-bg: #ffffff;
+      --overlay-bg: rgba(0, 0, 0, 0.55);
+    }
+    [data-theme='dark'] {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --overlay-bg: rgba(255, 255, 255, 0.15);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    nav.navbar {
+      background: var(--card-bg) !important;
+      transition: background 0.4s;
+    }
+
+    .section-head { margin: 40px 0 25px; text-align: center; }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover img { transform: scale(1.05); }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: var(--overlay-bg);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .gallery-card:hover .gallery-overlay { opacity: 1; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal.fade .modal-dialog {
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.4s ease-out;
+    }
+    .modal.show .modal-dialog {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .theme-toggle {
+      border: none;
+      background: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
   </style>
 </head>
+
 <body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="#">Ranjan Maji</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-  <div class="container">
-    <a class="navbar-brand" href="#">Ranjan Maji</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navmenu" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HEADER -->
-<header class="text-center py-5 bg-light">
-  <img src="images/ban661.jpg" alt="Ranjan Maji" class="rounded-circle mb-3" width="140" height="140">
-  <h2>Ranjan Maji</h2>
-  <p class="text-muted mb-1">Backend Developer — Node.js | MongoDB | AWS</p>
-  <p>Detail-oriented Software Engineer with 3+ years of experience building scalable backend systems and APIs.</p>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="container">
-  <div class="section-head"><h3>About Me</h3></div>
-  <p>
-    Hi, I'm <strong>Ranjan Maji</strong>, a backend developer specializing in Node.js, Express, MongoDB, and AWS.
-    I build scalable APIs and deploy high-performance applications. I enjoy problem-solving and improving
-    software efficiency in agile environments.
-  </p>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="container">
-  <div class="section-head"><h3>Experience</h3></div>
-
-  <h5>BrandWise Tech Private Limited — Software Engineer</h5>
-  <small>April 2024 – Present</small>
-  <ul>
-    <li><strong>Ubayurved Management:</strong> Scalable backend (Node.js + Express) with Twilio integration, AWS deployment, and React + Redux admin dashboard.</li>
-    <li><strong>Brandroute Media:</strong> Influencer management backend with real-time analytics dashboards using React.js and AWS hosting.</li>
-    <li><strong>Trademaza:</strong> Social platform for investors with MongoDB Atlas and RESTful APIs for analytics and admin moderation.</li>
-  </ul>
-
-  <h5>Techxi Solution LLP — Software Engineer</h5>
-  <small>Dec 2022 – Apr 2024</small>
-  <ul>
-    <li><strong>FreezeBooking:</strong> REST API-based booking system using Node.js + MySQL, AWS EC2 + CloudFront deployment.</li>
-    <li><strong>GE Backend:</strong> Loyalty system backend (Node.js + PostgreSQL + AWS RDS) with optimized point redemption.</li>
-  </ul>
-
-  <h5>Technoplat Pvt Ltd — Backend Developer</h5>
-  <small>Jun 2022 – Nov 2022</small>
-  <p>Developed hospital management backend using Node.js + MongoDB, deployed on AWS EC2 for scalability.</p>
-
-  <h5>Digital Computer System Pvt Ltd — Software Associate</h5>
-  <small>Aug 2021 – Jan 2022</small>
-  <p>Built billing software backend using Node.js and MongoDB with RESTful APIs.</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="container">
-  <div class="section-head"><h3>Technical Skills</h3></div>
-  <p>
-    Node.js (Express) • REST APIs • MongoDB • MySQL • PostgreSQL • React.js • Redux Toolkit • Tailwind CSS •
-    AWS (EC2, S3, RDS, CloudFront, Route53) • Twilio Integration • Docker • Nginx • SOAP UI
-  </p>
-</section>
-
-<!-- PROJECTS GALLERY -->
-<section id="projects" class="container">
-  <div class="section-head"><h3>Company Projects</h3></div>
-  <div class="row">
-    <!-- Project 1 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p1">
-        <img src="https://placehold.co/400x230" alt="Ubayurved Management">
-        <div class="gallery-overlay">Ubayurved Management</div>
+      <div id="navmenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button id="themeToggle" class="theme-toggle ml-3" title="Toggle Theme">
+              <i class="fa fa-moon-o"></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- Project 2 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p2">
-        <img src="https://placehold.co/400x230" alt="Brandroute Media">
-        <div class="gallery-overlay">Brandroute Media</div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="text-center py-5">
+    <img src="images/ban661.jpg" alt="Ranjan Maji" class="rounded-circle mb-3" width="140" height="140">
+    <h2>Ranjan Maji</h2>
+    <p class="text-muted mb-1">Backend Developer — Node.js | MongoDB | AWS</p>
+    <p>Detail-oriented Software Engineer with 3+ years of experience building scalable backend systems and APIs.</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <div class="section-head"><h3>About Me</h3></div>
+    <p>
+      Hi, I'm <strong>Ranjan Maji</strong>, a backend developer specializing in Node.js, Express, MongoDB, and AWS.
+      I build scalable APIs and deploy high-performance applications. I enjoy problem-solving and improving
+      software efficiency in agile environments.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="container">
+    <div class="section-head"><h3>Experience</h3></div>
+
+    <h5>BrandWise Tech Private Limited — Software Engineer</h5>
+    <small>April 2024 – Present</small>
+    <ul>
+      <li><strong>Ubayurved Management:</strong> Scalable backend (Node.js + Express) with Twilio integration, AWS deployment, and React + Redux admin dashboard.</li>
+      <li><strong>Brandroute Media:</strong> Influencer management backend with real-time analytics dashboards using React.js and AWS hosting.</li>
+      <li><strong>Trademaza:</strong> Social platform for investors with MongoDB Atlas and RESTful APIs for analytics and admin moderation.</li>
+    </ul>
+
+    <h5>Techxi Solution LLP — Software Engineer</h5>
+    <small>Dec 2022 – Apr 2024</small>
+    <ul>
+      <li><strong>FreezeBooking:</strong> REST API-based booking system using Node.js + MySQL, AWS EC2 + CloudFront deployment.</li>
+      <li><strong>GE Backend:</strong> Loyalty system backend (Node.js + PostgreSQL + AWS RDS) with optimized point redemption.</li>
+    </ul>
+
+    <h5>Technoplat Pvt Ltd — Backend Developer</h5>
+    <small>Jun 2022 – Nov 2022</small>
+    <p>Developed hospital management backend using Node.js + MongoDB, deployed on AWS EC2 for scalability.</p>
+
+    <h5>Digital Computer System Pvt Ltd — Software Associate</h5>
+    <small>Aug 2021 – Jan 2022</small>
+    <p>Built billing software backend using Node.js and MongoDB with RESTful APIs.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container">
+    <div class="section-head"><h3>Technical Skills</h3></div>
+    <p>
+      Node.js (Express) • REST APIs • MongoDB • MySQL • PostgreSQL • React.js • Redux Toolkit • Tailwind CSS •
+      AWS (EC2, S3, RDS, CloudFront, Route53) • Twilio Integration • Docker • Nginx • SOAP UI
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
+    <div class="section-head"><h3>Company Projects</h3></div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p1">
+          <img src="https://placehold.co/400x230" alt="Ubayurved Management">
+          <div class="gallery-overlay">Ubayurved Management</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p2">
+          <img src="https://placehold.co/400x230" alt="Brandroute Media">
+          <div class="gallery-overlay">Brandroute Media</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p3">
+          <img src="https://placehold.co/400x230" alt="Trademaza">
+          <div class="gallery-overlay">Trademaza</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p4">
+          <img src="https://placehold.co/400x230" alt="FreezeBooking">
+          <div class="gallery-overlay">FreezeBooking</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p5">
+          <img src="https://placehold.co/400x230" alt="GE Backend">
+          <div class="gallery-overlay">GE Backend</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gallery-card" data-toggle="modal" data-target="#p6">
+          <img src="https://placehold.co/400x230" alt="Hospital Management">
+          <div class="gallery-overlay">Hospital Management</div>
+        </div>
       </div>
     </div>
-    <!-- Project 3 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p3">
-        <img src="https://placehold.co/400x230" alt="Trademaza">
-        <div class="gallery-overlay">Trademaza</div>
-      </div>
-    </div>
-    <!-- Project 4 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p4">
-        <img src="https://placehold.co/400x230" alt="FreezeBooking">
-        <div class="gallery-overlay">FreezeBooking</div>
-      </div>
-    </div>
-    <!-- Project 5 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p5">
-        <img src="https://placehold.co/400x230" alt="GE Backend">
-        <div class="gallery-overlay">GE Backend</div>
-      </div>
-    </div>
-    <!-- Project 6 -->
-    <div class="col-md-4">
-      <div class="gallery-card" data-toggle="modal" data-target="#p6">
-        <img src="https://placehold.co/400x230" alt="Hospital Management">
-        <div class="gallery-overlay">Hospital Management</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- MODALS -->
-<div class="modal fade" id="p1"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>Ubayurved Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-    <p>Designed and deployed backend infrastructure with Node.js & Express. Built REST APIs, integrated Twilio for notifications, and managed AWS deployment (EC2, S3, Route53). Developed an admin dashboard with React.js + Redux Toolkit for real-time management.</p>
-    <p><strong>Tech Stack:</strong> Node.js, Express, React, Redux Toolkit, AWS, Twilio</p>
-  </div></div></div></div>
+  <!-- MODALS -->
+  <div class="modal fade" id="p1"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>Ubayurved Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+      <p>Node.js backend with Twilio integration, AWS deployment, and React dashboard.</p>
+      <p><strong>Tech Stack:</strong> Node.js, Express, React, Redux Toolkit, AWS, Twilio</p>
+    </div></div></div></div>
 
-<div class="modal fade" id="p2"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>Brandroute Media</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-    <p>Developed influencer marketing backend and dashboard. Integrated Twilio for communication and AWS services for hosting. Built analytics tools for tracking campaigns and performance.</p>
-    <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, AWS, React, Redux</p>
-  </div></div></div></div>
+  <div class="modal fade" id="p2"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>Brandroute Media</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+      <p>Influencer management system with real-time analytics and AWS hosting.</p>
+      <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, AWS, React, Redux</p>
+    </div></div></div></div>
 
-<div class="modal fade" id="p3"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>Trademaza</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-    <p>Built a social platform for stock investors using MongoDB Atlas and REST APIs. Provided admin moderation, analytics, and secure user management with Node.js backend.</p>
-    <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB Atlas, AWS</p>
-  </div></div></div></div>
+  <div class="modal fade" id="p3"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>Trademaza</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
+      <p>Social platform for investors using MongoDB Atlas and REST APIs.</p>
+      <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB Atlas, AWS</p>
+    </div></div></div></div>
 
-<div class="modal fade" id="p4"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>FreezeBooking</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> Techxi Solution LLP</p>
-    <p>Built RESTful booking APIs with Node.js and MySQL. Deployed on AWS EC2 and optimized content delivery with CloudFront.</p>
-    <p><strong>Tech Stack:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
-  </div></div></div></div>
+  <div class="modal fade" id="p4"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>FreezeBooking</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> Techxi Solution LLP</p>
+      <p>Booking API system built with Node.js + MySQL, deployed on AWS EC2 + CloudFront.</p>
+      <p><strong>Tech Stack:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
+    </div></div></div></div>
 
-<div class="modal fade" id="p5"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>GE Backend</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> Techxi Solution LLP</p>
-    <p>Created a loyalty system backend for reward points using PostgreSQL and AWS RDS. Improved efficiency in collection and redemption processes.</p>
-    <p><strong>Tech Stack:</strong> Node.js, PostgreSQL, AWS RDS</p>
-  </div></div></div></div>
+  <div class="modal fade" id="p5"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>GE Backend</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> Techxi Solution LLP</p>
+      <p>Loyalty system backend with PostgreSQL and AWS RDS optimization.</p>
+      <p><strong>Tech Stack:</strong> Node.js, PostgreSQL, AWS RDS</p>
+    </div></div></div></div>
 
-<div class="modal fade" id="p6"><div class="modal-dialog modal-lg"><div class="modal-content">
-  <div class="modal-header"><h5>Hospital Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
-  <div class="modal-body">
-    <p><strong>Company:</strong> Technoplat Pvt Ltd / Digital Computer System</p>
-    <p>Developed Node.js backend for hospital and billing systems. Implemented MongoDB for data storage and AWS EC2 for scalability.</p>
-    <p><strong>Tech Stack:</strong> Node.js, MongoDB, AWS EC2</p>
-  </div></div></div></div>
+  <div class="modal fade" id="p6"><div class="modal-dialog modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5>Hospital Management</h5><button class="close" data-dismiss="modal">&times;</button></div>
+    <div class="modal-body"><p><strong>Company:</strong> Technoplat Pvt Ltd / Digital Computer System</p>
+      <p>Hospital & billing backend with Node.js + MongoDB, AWS EC2 deployment.</p>
+      <p><strong>Tech Stack:</strong> Node.js, MongoDB, AWS EC2</p>
+    </div></div></div></div>
 
-<!-- EDUCATION -->
-<section id="education" class="container">
-  <div class="section-head"><h3>Education</h3></div>
-  <ul>
-    <li>B.Tech in Computer Science & Engineering — Modern Institute of Engineering & Technology, Kolkata (2021)</li>
-    <li>Diploma in Computer Science — Elite Polytechnic Institute, Mogra (2018)</li>
-    <li>Higher Secondary — Singur Mahamaya High School, Hooghly (2015)</li>
-  </ul>
-</section>
+  <!-- EDUCATION -->
+  <section id="education" class="container">
+    <div class="section-head"><h3>Education</h3></div>
+    <ul>
+      <li>B.Tech — Computer Science & Engineering (2021) — Modern Institute of Engineering & Technology, Kolkata</li>
+      <li>Diploma — Computer Science & Technology (2018) — Elite Polytechnic Institute, Mogra</li>
+      <li>Higher Secondary — Singur Mahamaya High School, Hooghly (2015)</li>
+    </ul>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="container mb-5">
-  <div class="section-head"><h3>Contact</h3></div>
-  <p><strong>Email:</strong> <a href="mailto:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a></p>
-  <p><strong>Phone:</strong> +91 8013046678</p>
-  <p><strong>Location:</strong> Ratanpur, Dihiratanpur, Singur, Hooghly, 712409</p>
-  <p><strong>GitHub:</strong> <a href="https://www.ranjanmaji.github.com">ranjanmaji.github.com</a></p>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="container mb-5">
+    <div class="section-head"><h3>Contact</h3></div>
+    <p><strong>Email:</strong> <a href="mailto:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a></p>
+    <p><strong>Phone:</strong> +91 8013046678</p>
+    <p><strong>Location:</strong> Ratanpur, Dihiratanpur, Singur, Hooghly, 712409</p>
+    <p><strong>GitHub:</strong> <a href="https://www.ranjanmaji.github.com">ranjanmaji.github.com</a></p>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© <span id="year"></span> Ranjan Maji. All Rights Reserved.</p>
-</footer>
+  <footer>
+    <p>© <span id="year"></span> Ranjan Maji. All Rights Reserved.</p>
+  </footer>
 
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>document.getElementById('year').innerText = new Date().getFullYear();</script>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Theme Toggle with Local Storage
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    else if (prefersDark) document.documentElement.setAttribute('data-theme', 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark'
+        ? '<i class="fa fa-sun-o"></i>'
+        : '<i class="fa fa-moon-o"></i>';
+    });
+  </script>
 </body>
 </html>
