@@ -1,376 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
+
 <head>
-  <meta charset="utf-8" />
-  <title>Ranjan Maji — Backend Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Ranjan Maji — Backend Developer (Node.js, MongoDB, AWS)" />
+    <title>Portfolio of Ranjan Maji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="C-Resume a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- css -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- //font-awesome icons -->
+    <link
+        href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
+    <!-- Default-JavaScript-File -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- //Default-JavaScript-File -->
 
-  <!-- Use CDN CSS (guaranteed to load if you have internet) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
-  <!-- Inline styles (ensures CSS works even if external files fail) -->
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #222;
-      --card-bg: #ffffff;
-      --overlay-bg: rgba(0, 0, 0, 0.55);
-    }
-    [data-theme='dark'] {
-      --bg-color: #121212;
-      --text-color: #f5f5f5;
-      --card-bg: #1e1e1e;
-      --overlay-bg: rgba(255, 255, 255, 0.12);
-    }
-
-    html,body{
-      height:100%;
-      margin:0;
-      padding:0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.35s, color 0.35s;
-    }
-
-    nav.navbar {
-      background: var(--card-bg) !important;
-      transition: background 0.4s;
-    }
-
-    .section-head { margin: 40px 0 25px; text-align: center; }
-
-    .gallery-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      transform: translateY(20px);
-      opacity: 0;
-      animation: fadeInUp 0.9s forwards;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      transition: transform 0.45s ease;
-      display:block;
-    }
-
-    .gallery-card:hover img { transform: scale(1.05); }
-
-    .gallery-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: var(--overlay-bg);
-      opacity: 0;
-      transition: opacity 0.45s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .gallery-card:hover .gallery-overlay { opacity: 1; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Modal smooth entrance (works with bootstrap .show) */
-    .modal.fade .modal-dialog {
-      transform: translateY(30px);
-      opacity: 0;
-      transition: all 0.35s ease-out;
-    }
-    .modal.show .modal-dialog {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    footer { background: #111; color: #fff; padding: 20px 0; margin-top: 30px; text-align:center; }
-    .theme-toggle { border: none; background: none; font-size: 18px; cursor: pointer; color: var(--text-color); }
-    header.py-5 { background: transparent; }
-    .text-muted { color: var(--text-color) !important; opacity: .7; }
-    /* small responsive tweak */
-    @media (max-width: 576px) {
-      .gallery-card img { height:160px; }
-    }
-  </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-light border-bottom shadow-sm">
-    <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#">Ranjan Maji</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- banner -->
+    <div class="w3-banner-top">
+        <div class="agileinfo-dot">
+            <div class="w3layouts_menu">
+                <nav class="cd-stretchy-nav edit-content">
+                    <a class="cd-nav-trigger" href="#0"> Menu <span aria-hidden="true"></span> </a>
+                    <ul>
+                        <li><a href="#home" class="scroll"><span>Home</span></a></li>
+                        <li><a href="#about" class="scroll"><span>About</span></a></li>
+                        <li><a href="#experiences" class="scroll"><span>Experiences</span></a></li>
+                        <li><a href="#skills" class="scroll"><span>Skills</span></a></li>
+                        <li><a href="#projects" class="scroll"><span>Projects</span></a></li>
+                        <li><a href="#contact" class="scroll"><span>Contact</span></a></li>
+                    </ul>
+                    <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                </nav>
+            </div>
 
-      <div id="navmenu" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ml-2">
-            <button id="themeToggle" class="theme-toggle" title="Toggle Theme"><i id="themeIcon" class="fa fa-moon-o"></i></button>
-          </li>
-        </ul>
-      </div>
+            <div class="w3-banner-grids">
+                <div class="col-md-6 w3-banner-grid-left">
+                    <div class="w3-banner-img">
+                        <img src="images/ban661.jpg" alt="img">
+                        <h3 class="test">Ranjan Maji</h3>
+                        <p class="test">backend developer</p>
+                    </div>
+                </div>
+                <div class="col-md-6 w3-banner-grid-right">
+                    <div class="w3-banner-text">
+                        <h3>Career Goal</h3>
+                        <p>The field of web development has become a hotspot in recent years. With websites gaining more
+                            and more traction, organizations have realized that to capture more leads, they need to have
+                            a strong online presence. As a result, they seek out talented people who can use the latest
+                            technologies to design and develop the best-looking and best-performing web applications for
+                            them</p>
+                    </div>
+                    <div class=" w3-right-addres-1">
+                        <ul class="address">
+                            <li>
+                                <ul class="agileits-address-text ">
+                                    <li class="agile-it-adress-left"><b>D.O.B</b></li>
+                                    <li><span>:</span>04-06-1996</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="agileits-address-text">
+                                    <li class="agile-it-adress-left"><b>PHONE</b></li>
+                                    <li><span>:</span>(+91) 801 304 6678</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="agileits-address-text">
+                                    <li class="agile-it-adress-left"><b>ADDRESS</b></li>
+                                    <li><span>:</span>Vill-Ratanpur,PO-Dihiratanpur,PS-Singur,Dis-Hooghly</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="agileits-address-text">
+                                    <li class="agile-it-adress-left"><b>E-MAIL</b></li>
+                                    <li><span>:</span><a href="mailto:example@mail.com">ranjanmaji906@gmail.com</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="agileits-address-text">
+                                    <li class="agile-it-adress-left"><b>WEBSITE</b></li>
+                                    <li><span>:</span><a href="#">www.ranjanmaji.github.com</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="thim-click-to-bottom">
+            <a href="#about" class="scroll">
+                <i class="fa  fa-chevron-down"></i>
+            </a>
+        </div>
+
     </div>
-  </nav>
+    <!-- banner -->
+    <!-- /about -->
 
-  <!-- HEADER -->
-  <header class="text-center py-5">
-    <!-- placeholder image (replace with your ./images/ban661.jpg if you have it locally) -->
-    <img src="https://placehold.co/140x140?text=R" alt="Ranjan Maji" class="rounded-circle mb-3" width="140" height="140">
-    <h2>Ranjan Maji</h2>
-    <p class="text-muted mb-1">Backend Developer — Node.js | MongoDB | AWS</p>
-    <p class="text-muted">Detail-oriented Software Engineer with 3+ years of experience building scalable backend systems and APIs.</p>
-  </header>
+    <div class="w3-about" id="about">
+	<div class="container">
+		<div class="w3-about-head">
+			<h3>About me</h3>
+		</div>
+		<div class="w3-about-grids">
+		<div class=" w3-about-grids1">
+				<div class="col-md-6 w3-about-grid-left1">
+					<img src="images/ab5.jpg" alt="img1">
+		
+				</div>
+				<div class="col-md-6 w3-about-grid-right1">
+					<h3>Hi, I'm Ranjan Maji, a passionate backend developer with extensive experience in building robust and scalable server-side applications. 
+                        I specialize in developing APIs, working with databases, and ensuring the security and performance of web applications.</h3>
+					<p>My skill set includes proficiency in languages like Python and Node.js, and I have a strong understanding of various frameworks and tools such as Django, Spring Boot, and Express.js.
+                        I'm also experienced in cloud services, containerization, and continuous integration/continuous deployment (CI/CD) practices.</p>
+					<h5>I enjoy solving complex problems, optimizing backend processes, and working in collaborative environments to deliver high-quality software solutions.</h5>
+					<div class= "w3-about-grid-small-border">
+					<div class="col-md-4 w3-about-grid-small">
+						<h3 class="w3-head-project">5</h3>
+						<h5>web projects</h5>
+					</div>
+					<div class="col-md-4 w3-about-grid-small">
+					<h3 class="w3-head-project">10</h3>
+						<h5>Nodejs projects</h5>
+					</div>
+					<div class="col-md-4 w3-about-grid-small">
+						<h3 class="w3-head-project">3</h3>
+						<h5>Python projects</h5>
+						<div class="clearfix"></div>
+					</div>
+				<div class="clearfix"></div>
+				</div>
+				</div>
+				<div class="clearfix"></div>
+                <div class="w3-about-grids2">
+                    <div class="col-md-6 w3-about-grid-left2">
+                        <h3>The Future of Backend Development</h3>
+                        <p> The landscape of backend development is constantly evolving. With the rise of microservices, serverless architectures, and containerization, developers are now equipped with powerful tools to build scalable and efficient applications.</p>
+                        <p> In this blog, we delve into the latest trends and technologies that are shaping the backend development world. From exploring the benefits of using GraphQL over REST to understanding the implications of edge computing, our goal is to provide insightful content that keeps you ahead of the curve.</p>
+                        <!-- <h4><a href="#">Read More</a></h4> -->
+                        <h4><a href="/blog/full-article.html">Read More</a></h4>
+                    </div>
+                    <div class="col-md-6 w3-about-grid-right2">
+                        <img src="images/ab7.jpg" alt="img1">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            
+		</div>
+	</div>
+</div>
+</div> 
+    <!-- //about  -->
 
-  <!-- ABOUT -->
-  <section id="about" class="container">
-    <div class="section-head"><h3>About Me</h3></div>
-    <p>Hi, I'm <strong>Ranjan Maji</strong>, a backend developer specializing in Node.js, Express, MongoDB, and AWS.
-      I build scalable APIs and deploy high-performance applications. I enjoy problem-solving and improving
-      software efficiency in agile environments.</p>
-  </section>
+    
+    <!-- //skills -->
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="container">
-    <div class="section-head"><h3>Experience</h3></div>
+    <!-- main-content -->
+    <div class="main-content">
+        <!-- gallery -->
+        <div class="gallery" id="projects">
+            <div class="w3-gallery-head">
+                <h3>My projects</h3>
+            </div>
+            <div class="container">
+                <div class="gallery_gds">
+                    <ul class="simplefilter ">
+                        <li class="active" data-filter="all">All</li>
+                        <li data-filter="1">Nodejs</li>
+                        <li data-filter="2">Python</li>
+                        <li data-filter="3">Web development</li>
+                    </ul>
+                    <div class="filtr-container " style="padding: 0px; position: relative; height: 858px;">
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 5"
+                            data-sort="Busy streets"
+                            style="opacity: 1; transform: scale(1) translate3d(0px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g1.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal1">View Details</a></div>
+                                </div>
 
-    <h5>BrandWise Tech Private Limited — Software Engineer</h5>
-    <small class="text-muted d-block mb-2">April 2024 – Present</small>
-    <ul>
-      <li><strong>Ubayurved Management:</strong> Scalable backend (Node.js + Express) with Twilio integration, AWS deployment, and React + Redux admin dashboard.</li>
-      <li><strong>Brandroute Media:</strong> Influencer management backend with real-time analytics dashboards using React.js and AWS hosting.</li>
-      <li><strong>Trademaza:</strong> Social platform for investors with MongoDB Atlas and RESTful APIs for analytics and admin moderation.</li>
-    </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 5"
+                            data-sort="Luminous night"
+                            style="opacity: 1; transform: scale(1) translate3d(380px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g2.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal2">View Details</a></div>
+                                </div>
 
-    <h5 class="mt-3">Techxi Solution LLP — Software Engineer</h5>
-    <small class="text-muted d-block mb-2">Dec 2022 – Apr 2024</small>
-    <ul>
-      <li><strong>FreezeBooking:</strong> REST API-based booking system using Node.js + MySQL, AWS EC2 + CloudFront deployment.</li>
-      <li><strong>GE Backend:</strong> Loyalty system backend (Node.js + PostgreSQL + AWS RDS) with optimized point redemption.</li>
-    </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 4"
+                            data-sort="City wonders"
+                            style="opacity: 1; transform: scale(1) translate3d(760px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g31.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal3">View Details</a></div>
+                                </div>
 
-    <h5 class="mt-3">Technoplat Pvt Ltd — Backend Developer</h5>
-    <small class="text-muted d-block mb-2">Jun 2022 – Nov 2022</small>
-    <p>Developed hospital management backend using Node.js + MongoDB, deployed on AWS EC2 for scalability.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3"
+                            data-sort="In production"
+                            style="opacity: 1; transform: scale(1) translate3d(0px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g4.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal4">View Details</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4"
+                            data-sort="Industrial site"
+                            style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g5.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal5">View Details</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4"
+                            data-sort="Industrial site"
+                            style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g6.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal5">View Details</a></div>
+                                </div>
 
-    <h5 class="mt-3">Digital Computer System Pvt Ltd — Software Associate</h5>
-    <small class="text-muted d-block mb-2">Aug 2021 – Jan 2022</small>
-    <p>Built billing software backend using Node.js and MongoDB with RESTful APIs.</p>
-  </section>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3"
+                            data-sort="City lights"
+                            style="opacity: 1; transform: scale(1) translate3d(0px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g7.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal7">View Details</a></div>
+                                </div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="container">
-    <div class="section-head"><h3>Technical Skills</h3></div>
-    <p>Node.js (Express) • REST APIs • MongoDB • MySQL • PostgreSQL • React.js • Redux Toolkit • Tailwind CSS •
-      AWS (EC2, S3, RDS, CloudFront, Route53) • Twilio Integration • Docker • Nginx • SOAP UI</p>
-  </section>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 4"
+                            data-sort="Dreamhouse"
+                            style="opacity: 1; transform: scale(1) translate3d(380px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g8.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal8">View Details</a></div>
+                                </div>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="container">
-    <div class="section-head"><h3>Company Projects</h3></div>
-    <div class="row">
-      <!-- six project placeholders; replace src with ./images/g1.jpg etc. if you add local images -->
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p1" style="animation-delay:0s;">
-          <img src="https://placehold.co/400x230?text=Ubayurved" alt="Ubayurved Management">
-          <div class="gallery-overlay">Ubayurved Management</div>
-        </div>
-      </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3, 4"
+                            data-sort="Dreamhouse"
+                            style="opacity: 1; transform: scale(1) translate3d(760px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <img src="images/g9.jpg" alt="property" />
+                                    <span class="jm-item-overlay"> </span>
+                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
+                                            data-target="#myModal9">View Details</a></div>
+                                </div>
 
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p2" style="animation-delay:.12s;">
-          <img src="https://placehold.co/400x230?text=Brandroute" alt="Brandroute Media">
-          <div class="gallery-overlay">Brandroute Media</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p3" style="animation-delay:.24s;">
-          <img src="https://placehold.co/400x230?text=Trademaza" alt="Trademaza">
-          <div class="gallery-overlay">Trademaza</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p4" style="animation-delay:.36s;">
-          <img src="https://placehold.co/400x230?text=FreezeBooking" alt="FreezeBooking">
-          <div class="gallery-overlay">FreezeBooking</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p5" style="animation-delay:.48s;">
-          <img src="https://placehold.co/400x230?text=GE+Backend" alt="GE Backend">
-          <div class="gallery-overlay">GE Backend</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="gallery-card" data-toggle="modal" data-target="#p6" style="animation-delay:.6s;">
-          <img src="https://placehold.co/400x230?text=Hospital" alt="Hospital Management">
-          <div class="gallery-overlay">Hospital Management</div>
-        </div>
-      </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!--//gallery-->
     </div>
-  </section>
+    <!-- //main-content -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="w3ls-property-images w3-pop1-img">
+            </div>
 
-  <!-- MODALS (project details) -->
-  <div class="modal fade" id="p1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Ubayurved Management</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-        <p>Node.js backend with Twilio integration, AWS deployment, and React dashboard.</p>
-        <p><strong>Tech Stack:</strong> Node.js, Express, React, Redux Toolkit, AWS, Twilio</p>
-      </div>
-    </div></div>
-  </div>
+            <div class="ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
 
-  <div class="modal fade" id="p2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Brandroute Media</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-        <p>Influencer management system with real-time analytics and AWS hosting.</p>
-        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, AWS, React, Redux</p>
-      </div>
-    </div></div>
-  </div>
+                </div>
 
-  <div class="modal fade" id="p3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Trademaza</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> BrandWise Tech Pvt Ltd</p>
-        <p>Social platform for investors using MongoDB Atlas and REST APIs.</p>
-        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB Atlas, AWS</p>
-      </div>
-    </div></div>
-  </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 
-  <div class="modal fade" id="p4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">FreezeBooking</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> Techxi Solution LLP</p>
-        <p>Booking API system built with Node.js + MySQL, deployed on AWS EC2 + CloudFront.</p>
-        <p><strong>Tech Stack:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
-      </div>
-    </div></div>
-  </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="w3ls-property-images">
+                <img src="images/gal11.jpg" alt="image">
+            </div>
 
-  <div class="modal fade" id="p5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">GE Backend</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> Techxi Solution LLP</p>
-        <p>Loyalty system backend with PostgreSQL and AWS RDS optimization.</p>
-        <p><strong>Tech Stack:</strong> Node.js, PostgreSQL, AWS RDS</p>
-      </div>
-    </div></div>
-  </div>
+            <div class="ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
 
-  <div class="modal fade" id="p6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document"><div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Hospital Management</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button></div>
-      <div class="modal-body">
-        <p><strong>Company:</strong> Technoplat Pvt Ltd / Digital Computer System</p>
-        <p>Hospital & billing backend with Node.js + MongoDB, AWS EC2 deployment.</p>
-        <p><strong>Tech Stack:</strong> Node.js, MongoDB, AWS EC2</p>
-      </div>
-    </div></div>
-  </div>
+                </div>
 
-  <!-- EDUCATION -->
-  <section id="education" class="container">
-    <div class="section-head"><h3>Education</h3></div>
-    <ul>
-      <li>B.Tech — Computer Science & Engineering (2021) — Modern Institute of Engineering & Technology, Kolkata</li>
-      <li>Diploma — Computer Science & Technology (2018) — Elite Polytechnic Institute, Mogra</li>
-      <li>Higher Secondary — Singur Mahamaya High School, Hooghly (2015)</li>
-    </ul>
-  </section>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="container mb-5">
-    <div class="section-head"><h3>Contact</h3></div>
-    <p><strong>Email:</strong> <a href="mailto:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a></p>
-    <p><strong>Phone:</strong> +91 8013046678</p>
-    <p><strong>Location:</strong> Ratanpur, Dihiratanpur, Singur, Hooghly, 712409</p>
-    <p><strong>GitHub:</strong> <a href="https://www.ranjanmaji.github.com">ranjanmaji.github.com</a></p>
-  </section>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img2">
+                <img src="images/gal22.jpg" alt="image">
+            </div>
 
-  <footer>
-    <p>© <span id="year"></span> Ranjan Maji. All Rights Reserved.</p>
-  </footer>
+            <div class=" ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
 
-  <!-- JS: jQuery, Popper, Bootstrap (CDN) -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
 
-  <script>
-    // Year
-    document.getElementById('year').innerText = new Date().getFullYear();
+                </div>
 
-    // Theme Toggle with Local Storage + initial icon set
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme');
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (prefersDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="w3ls-property-images w3-pop1-img3">
+                <img src="images/gal33.jpg" alt="image">
+            </div>
 
-    // set initial icon
-    function updateThemeIcon() {
-      const current = document.documentElement.getAttribute('data-theme');
-      themeIcon.className = current === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
-    }
-    updateThemeIcon();
+            <div class="ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
 
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon();
-    });
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
 
-    // if you see CSS not applying, open DevTools (F12) -> Network and look for failed resource loads (404)
-  </script>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img4">
+                <img src="images/gal44.jpg" alt="image">
+            </div>
+
+            <div class=" ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img5">
+                <img src="images/gal66.jpg" alt="image">
+            </div>
+
+            <div class=" ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img6">
+                <img src="images/gal61.jpg" alt="image">
+            </div>
+
+            <div class=" ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img7">
+                <img src="images/gal77.jpg" alt="image">
+            </div>
+
+            <div class="ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img8">
+                <img src="images/gal88.jpg" alt="image">
+            </div>
+
+            <div class=" ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class=" w3ls-property-images w3-pop1-img9">
+                <img src="images/gal99.jpg" alt="image">
+            </div>
+
+            <div class="ins-details">
+                <div class="ins-name">
+                    <h3>voluptatem accusantium doloremque</h3>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo</p>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script src="js/jquery.filterizr.js"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function () {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
+
+    <!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="w3ls-heading">
+                <h3>Contact me</h3>
+            </div>
+            <div class="contact-w3ls">
+                <form action="#" method="post">
+                    <div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
+                        <input type="text" name="First Name" placeholder="Name" required="">
+                        <input type="email" class="email" name="Email" placeholder="Email" required="">
+                        <input type="text" name="Number" placeholder="Mobile Number" required="">
+                        <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
+                    </div>
+                    <div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
+                        <textarea name="Message" placeholder="Message" required=""></textarea>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="clearfix"> </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- //contact -->
+    <!-- footer -->
+    <div class="w3l_footer">
+        <div class="container">
+
+            <div class="w3ls_footer_grids">
+
+                <div class="w3ls_footer_grid">
+                    <div class="col-md-4 w3ls_footer_grid_left">
+                        <div class="w3ls_footer_grid_leftl">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3ls_footer_grid_leftr">
+                            <h4>Location</h4>
+                            <p>Kolkata,WestBengal</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 w3ls_footer_grid_left">
+                        <div class="w3ls_footer_grid_leftl">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3ls_footer_grid_leftr">
+                            <h4>Email</h4>
+                            <a href="gmail:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 w3ls_footer_grid_left">
+                        <div class="w3ls_footer_grid_leftl">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3ls_footer_grid_leftr">
+                            <h4>Call Me</h4>
+                            <p>(+91) 801 304 6678</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3l_footer_pos">
+            <p>© 2022 C-Resume. All Rights Reserved | Design by Me</p>
+        </div>
+    </div>
+    <!-- //footer -->
+    <script src="js/bars.js"></script>
+    <!-- start-smoth-scrolling -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <!-- text-effect -->
+    <script type="text/javascript" src="js/jquery.transit.js"></script>
+    <script type="text/javascript" src="js/jquery.textFx.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.test').textFx({
+                type: 'fadeIn',
+                iChar: 100,
+                iAnim: 1000
+            });
+        });
+    </script>
+    <!-- //text-effect -->
+    <!-- menu-js -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/menu.js"></script>
+    <!-- //menu-js -->
+
+
+    <script type="text/javascript" src="js/move-top.js"></script>
+
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+
+
 </body>
+
 </html>
