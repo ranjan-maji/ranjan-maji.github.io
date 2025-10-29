@@ -1,669 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
-
 <head>
-    <title>Portfolio of Ranjan Maji</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords" content="C-Resume a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <!-- css -->
-    <!-- font-awesome icons -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- //font-awesome icons -->
-    <link
-        href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
-    <!-- Default-JavaScript-File -->
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- //Default-JavaScript-File -->
-
+  <meta charset="utf-8" />
+  <title>Ranjan Maji — Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Ranjan Maji — Backend Developer (Node.js, MongoDB, AWS)" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
+  <style>
+    /* Simple custom styles to keep layout tidy */
+    body { font-family: 'Poppins', sans-serif; color:#222; }
+    .banner { background:#f7f9fb; padding:40px 0; }
+    .banner .name { font-weight:700; font-size:28px; margin-top:10px; }
+    .banner .title { color:#555; font-size:16px; }
+    .contact-list li { list-style:none; margin-bottom:6px; }
+    .section-head { margin:40px 0 20px; }
+    .skill-badge { display:inline-block; margin:6px 8px 6px 0; padding:6px 10px; background:#eef3ff; border-radius:20px; font-size:13px; }
+    .project-card { border:1px solid #eee; padding:18px; border-radius:8px; margin-bottom:16px; background:#fff; }
+    .experience-item { margin-bottom:18px; }
+    footer { background:#111; color:#fff; padding:20px 0; margin-top:30px; }
+    .small-muted { color:#6c757d; font-size:13px; }
+    .stats { text-align:center; }
+    .stats h3 { margin:0; font-size:26px; }
+    .stats p { margin:0; color:#6c757d; }
+    @media (max-width:767px){ .banner .w-50 { width:100%!important; } }
+  </style>
 </head>
-
 <body>
-    <!-- banner -->
-    <div class="w3-banner-top">
-        <div class="agileinfo-dot">
-            <div class="w3layouts_menu">
-                <nav class="cd-stretchy-nav edit-content">
-                    <a class="cd-nav-trigger" href="#0"> Menu <span aria-hidden="true"></span> </a>
-                    <ul>
-                        <li><a href="#home" class="scroll"><span>Home</span></a></li>
-                        <li><a href="#about" class="scroll"><span>About</span></a></li>
-                        <li><a href="#experiences" class="scroll"><span>Experiences</span></a></li>
-                        <li><a href="#skills" class="scroll"><span>Skills</span></a></li>
-                        <li><a href="#projects" class="scroll"><span>Projects</span></a></li>
-                        <li><a href="#contact" class="scroll"><span>Contact</span></a></li>
-                    </ul>
-                    <span aria-hidden="true" class="stretchy-nav-bg"></span>
-                </nav>
-            </div>
 
-            <div class="w3-banner-grids">
-                <div class="col-md-6 w3-banner-grid-left">
-                    <div class="w3-banner-img">
-                        <img src="images/ban661.jpg" alt="img">
-                        <h3 class="test">Ranjan Maji</h3>
-                        <p class="test">backend developer</p>
-                    </div>
-                </div>
-                <div class="col-md-6 w3-banner-grid-right">
-                    <div class="w3-banner-text">
-                        <h3>Career Goal</h3>
-                        <p>The field of web development has become a hotspot in recent years. With websites gaining more
-                            and more traction, organizations have realized that to capture more leads, they need to have
-                            a strong online presence. As a result, they seek out talented people who can use the latest
-                            technologies to design and develop the best-looking and best-performing web applications for
-                            them</p>
-                    </div>
-                    <div class=" w3-right-addres-1">
-                        <ul class="address">
-                            <li>
-                                <ul class="agileits-address-text ">
-                                    <li class="agile-it-adress-left"><b>D.O.B</b></li>
-                                    <li><span>:</span>04-06-1996</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li class="agile-it-adress-left"><b>PHONE</b></li>
-                                    <li><span>:</span>(+91) 801 304 6678</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li class="agile-it-adress-left"><b>ADDRESS</b></li>
-                                    <li><span>:</span>Vill-Ratanpur,PO-Dihiratanpur,PS-Singur,Dis-Hooghly</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li class="agile-it-adress-left"><b>E-MAIL</b></li>
-                                    <li><span>:</span><a href="mailto:example@mail.com">ranjanmaji906@gmail.com</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="agileits-address-text">
-                                    <li class="agile-it-adress-left"><b>WEBSITE</b></li>
-                                    <li><span>:</span><a href="#">www.ranjanmaji.github.com</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="thim-click-to-bottom">
-            <a href="#about" class="scroll">
-                <i class="fa  fa-chevron-down"></i>
-            </a>
-        </div>
-
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ranjan Maji</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navmenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- banner -->
-    <!-- /about -->
+  </nav>
 
-    <div class="w3-about" id="about">
-	<div class="container">
-		<div class="w3-about-head">
-			<h3>About me</h3>
-		</div>
-		<div class="w3-about-grids">
-		<div class=" w3-about-grids1">
-				<div class="col-md-6 w3-about-grid-left1">
-					<img src="images/ab5.jpg" alt="img1">
-		
-				</div>
-				<div class="col-md-6 w3-about-grid-right1">
-					<h3>Hi, I'm Ranjan Maji, a passionate backend developer with extensive experience in building robust and scalable server-side applications. 
-                        I specialize in developing APIs, working with databases, and ensuring the security and performance of web applications.</h3>
-					<p>My skill set includes proficiency in languages like Python and Node.js, and I have a strong understanding of various frameworks and tools such as Django, Spring Boot, and Express.js.
-                        I'm also experienced in cloud services, containerization, and continuous integration/continuous deployment (CI/CD) practices.</p>
-					<h5>I enjoy solving complex problems, optimizing backend processes, and working in collaborative environments to deliver high-quality software solutions.</h5>
-					<div class= "w3-about-grid-small-border">
-					<div class="col-md-4 w3-about-grid-small">
-						<h3 class="w3-head-project">5</h3>
-						<h5>web projects</h5>
-					</div>
-					<div class="col-md-4 w3-about-grid-small">
-					<h3 class="w3-head-project">10</h3>
-						<h5>Nodejs projects</h5>
-					</div>
-					<div class="col-md-4 w3-about-grid-small">
-						<h3 class="w3-head-project">3</h3>
-						<h5>Python projects</h5>
-						<div class="clearfix"></div>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				</div>
-				<div class="clearfix"></div>
-                <div class="w3-about-grids2">
-                    <div class="col-md-6 w3-about-grid-left2">
-                        <h3>The Future of Backend Development</h3>
-                        <p> The landscape of backend development is constantly evolving. With the rise of microservices, serverless architectures, and containerization, developers are now equipped with powerful tools to build scalable and efficient applications.</p>
-                        <p> In this blog, we delve into the latest trends and technologies that are shaping the backend development world. From exploring the benefits of using GraphQL over REST to understanding the implications of edge computing, our goal is to provide insightful content that keeps you ahead of the curve.</p>
-                        <!-- <h4><a href="#">Read More</a></h4> -->
-                        <h4><a href="/blog/full-article.html">Read More</a></h4>
-                    </div>
-                    <div class="col-md-6 w3-about-grid-right2">
-                        <img src="images/ab7.jpg" alt="img1">
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            
-		</div>
-	</div>
-</div>
-</div> 
-    <!-- //about  -->
-
-    
-    <!-- //skills -->
-
-    <!-- main-content -->
-    <div class="main-content">
-        <!-- gallery -->
-        <div class="gallery" id="projects">
-            <div class="w3-gallery-head">
-                <h3>My projects</h3>
-            </div>
-            <div class="container">
-                <div class="gallery_gds">
-                    <ul class="simplefilter ">
-                        <li class="active" data-filter="all">All</li>
-                        <li data-filter="1">Nodejs</li>
-                        <li data-filter="2">Python</li>
-                        <li data-filter="3">Web development</li>
-                    </ul>
-                    <div class="filtr-container " style="padding: 0px; position: relative; height: 858px;">
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 5"
-                            data-sort="Busy streets"
-                            style="opacity: 1; transform: scale(1) translate3d(0px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g1.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal1">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 5"
-                            data-sort="Luminous night"
-                            style="opacity: 1; transform: scale(1) translate3d(380px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g2.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal2">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 4"
-                            data-sort="City wonders"
-                            style="opacity: 1; transform: scale(1) translate3d(760px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g31.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal3">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3"
-                            data-sort="In production"
-                            style="opacity: 1; transform: scale(1) translate3d(0px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g4.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal4">View Details</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4"
-                            data-sort="Industrial site"
-                            style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g5.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal5">View Details</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4"
-                            data-sort="Industrial site"
-                            style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g6.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal5">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3"
-                            data-sort="City lights"
-                            style="opacity: 1; transform: scale(1) translate3d(0px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g7.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal7">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 4"
-                            data-sort="Dreamhouse"
-                            style="opacity: 1; transform: scale(1) translate3d(380px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g8.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal8">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3, 4"
-                            data-sort="Dreamhouse"
-                            style="opacity: 1; transform: scale(1) translate3d(760px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-                            <div class="jm-item-wrapper">
-                                <div class="jm-item-image">
-                                    <img src="images/g9.jpg" alt="property" />
-                                    <span class="jm-item-overlay"> </span>
-                                    <div class="jm-item-button"><a href="#" data-toggle="modal"
-                                            data-target="#myModal9">View Details</a></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!--//gallery-->
-    </div>
-    <!-- //main-content -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class="w3ls-property-images w3-pop1-img">
-            </div>
-
-            <div class="ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
+  <!-- BANNER -->
+  <header class="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/ban661.jpg" alt="Ranjan" class="img-fluid rounded" style="max-width:220px;">
+          <div class="name">Ranjan Maji</div>
+          <div class="title">Backend Developer — Node.js | Python | AWS</div>
+          <p class="small-muted" style="margin-top:8px;">
+            Detail-oriented Software Engineer with 3+ years building scalable backend systems and admin dashboards.
+            Expertise: Node.js, Express, MongoDB, MySQL/Postgres, React, and AWS (EC2, S3, Route53, RDS).
+          </p>
         </div>
+
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5 class="mb-2">Contact & Personal</h5>
+            <ul class="contact-list p-0 mb-0">
+              <li><strong>Date of Birth:</strong> 04-06-1996</li>
+              <li><strong>Location:</strong> Ratanpur, Dihiratanpur, Singur, Hooghly, West Bengal</li>
+              <li><strong>Phone:</strong> (+91) 801 304 6678</li>
+              <li><strong>Email:</strong> <a href="mailto:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a></li>
+              <li><strong>Website / GitHub:</strong> <a href="https://www.ranjanmaji.github.com">ranjanmaji.github.com</a></li>
+            </ul>
+          </div>
+
+          <div class="card mt-3 p-3">
+            <h6 class="mb-2">Quick Stats</h6>
+            <div class="row">
+              <div class="col-4 stats">
+                <h3>3+</h3><p>Years Experience</p>
+              </div>
+              <div class="col-4 stats">
+                <h3>10</h3><p>Node.js Projects</p>
+              </div>
+              <div class="col-4 stats">
+                <h3>5</h3><p>Web Projects</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <div class="section-head">
+      <h3>About Me</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <p>
+          Hi, I'm <strong>Ranjan Maji</strong>, a passionate backend developer experienced in designing and deploying
+          scalable server-side applications. I specialize in building RESTful APIs, working with NoSQL and RDBMS,
+          and deploying applications on AWS. I enjoy solving complex problems, optimizing backend processes, and
+          delivering high-quality software in Agile environments.
+        </p>
+
+        <h5 class="mt-3">Technical Summary</h5>
+        <ul>
+          <li><strong>Languages:</strong> JavaScript (Node.js), some Python</li>
+          <li><strong>Backend:</strong> Node.js (Express), REST APIs</li>
+          <li><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL, Oracle</li>
+          <li><strong>Frontend:</strong> React.js, Tailwind CSS</li>
+          <li><strong>Cloud:</strong> AWS (EC2, S3, Amplify, Route53, RDS, CloudFront)</li>
+          <li><strong>Tools & Others:</strong> React Redux / Redux Toolkit, Twilio, Nginx, domain config, file handling, SOAP UI</li>
+        </ul>
+
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h6>Hobbies</h6>
+          <p>Gaming, exploring technology trends, watching movies & web series.</p>
+          <h6 class="mt-3">Languages</h6>
+          <p>English, Hindi, Bengali</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="container mt-4">
+    <div class="section-head">
+      <h3>Professional Experience</h3>
     </div>
 
-    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class="w3ls-property-images">
-                <img src="images/gal11.jpg" alt="image">
-            </div>
-
-            <div class="ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+    <div class="experience-item">
+      <h5>Software Engineer — BrandWise Tech Private Limited, Kolkata</h5>
+      <small class="small-muted">April 2024 – Present</small>
+      <ul>
+        <li><strong>Ubayurved Management:</strong> Designed scalable backend infrastructure using Node.js & Express; built REST APIs; integrated Twilio; deployed on AWS (EC2, S3, Route53) ensuring availability and security; built admin dashboard with React, Redux Toolkit, and Tailwind CSS.</li>
+        <li><strong>Brandroute Media:</strong> Engineered backend for influencer management platform (Node.js/Express); built dashboards with real-time campaign analytics using React + Redux; integrated Twilio and AWS services for deployment and notifications.</li>
+        <li><strong>Trademaza:</strong> Developed a social platform for stock investors using MongoDB Atlas and RESTful APIs; created admin moderation and analytics tools.</li>
+      </ul>
     </div>
 
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img2">
-                <img src="images/gal22.jpg" alt="image">
-            </div>
-
-            <div class=" ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+    <div class="experience-item">
+      <h5>Software Engineer — Techxi Solution LLP, Kolkata</h5>
+      <small class="small-muted">December 2022 – April 2024</small>
+      <ul>
+        <li><strong>FreezeBooking:</strong> Developed REST APIs for booking flows using Node.js and MySQL. Deployed on AWS EC2 and used CloudFront for optimized delivery.</li>
+        <li><strong>GE Backend:</strong> Designed loyalty system backend using PostgreSQL & AWS RDS. Optimized performance for point collection and redemption.</li>
+      </ul>
     </div>
 
-    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class="w3ls-property-images w3-pop1-img3">
-                <img src="images/gal33.jpg" alt="image">
-            </div>
-
-            <div class="ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+    <div class="experience-item">
+      <h5>Backend Developer — Technoplat Pvt Ltd, Kolkata</h5>
+      <small class="small-muted">June 2022 – November 2022</small>
+      <ul>
+        <li><strong>Hospital Management:</strong> Streamlined hospital operations with Node.js backend and MongoDB for data persistence; deployed on AWS EC2 for scalability.</li>
+      </ul>
     </div>
 
-    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img4">
-                <img src="images/gal44.jpg" alt="image">
-            </div>
+    <div class="experience-item">
+      <h5>Software Associate — Digital Computer System Pvt Ltd, Burdwan</h5>
+      <small class="small-muted">August 2021 – January 2022</small>
+      <ul>
+        <li><strong>Billing Software:</strong> Developed REST APIs and managed MongoDB for billing workflows and operational efficiency.</li>
+      </ul>
+    </div>
+  </section>
 
-            <div class=" ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+  <!-- SKILLS -->
+  <section id="skills" class="container mt-4">
+    <div class="section-head">
+      <h3>Technical Skills</h3>
     </div>
 
-    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img5">
-                <img src="images/gal66.jpg" alt="image">
-            </div>
+    <div class="mb-3">
+      <span class="skill-badge">Node.js (Express)</span>
+      <span class="skill-badge">JavaScript (ES6+)</span>
+      <span class="skill-badge">REST APIs</span>
+      <span class="skill-badge">MongoDB</span>
+      <span class="skill-badge">MySQL / PostgreSQL</span>
+      <span class="skill-badge">React.js</span>
+      <span class="skill-badge">Redux / Redux Toolkit</span>
+      <span class="skill-badge">Tailwind CSS</span>
+      <span class="skill-badge">AWS (EC2, S3, Route53, RDS, CloudFront)</span>
+      <span class="skill-badge">Docker / Containerization</span>
+      <span class="skill-badge">Twilio Integration</span>
+      <span class="skill-badge">Nginx / Domain Setup</span>
+      <span class="skill-badge">SOAP UI / File Handling</span>
+    </div>
+  </section>
 
-            <div class=" ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="container mt-4">
+    <div class="section-head">
+      <h3>Selected Projects</h3>
     </div>
 
-    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img6">
-                <img src="images/gal61.jpg" alt="image">
-            </div>
-
-            <div class=" ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="project-card">
+          <h5>Ubayurved Management</h5>
+          <p class="small-muted">BrandWise Tech — Backend & Admin Dashboard</p>
+          <p>Designed scalable backend using Node.js & Express for resource & financial management. Built REST APIs, Twilio integration for notifications, and a React.js + Redux Toolkit admin dashboard. Deployed to AWS (EC2, S3, Route53).</p>
+          <p><strong>Tech:</strong> Node.js, Express, React, Redux Toolkit, AWS (EC2, S3, Route53), Twilio</p>
         </div>
+
+        <div class="project-card">
+          <h5>Brandroute Media — Influencer Management</h5>
+          <p class="small-muted">BrandWise Tech</p>
+          <p>Engineered backend for influencer campaigns and real-time analytics dashboards. Implemented Twilio for communication and AWS for hosting and storage.</p>
+          <p><strong>Tech:</strong> Node.js, Express, React, MongoDB, AWS</p>
+        </div>
+
+        <div class="project-card">
+          <h5>Trademaza — Social Platform for Investors</h5>
+          <p class="small-muted">BrandWise Tech</p>
+          <p>Built a social media style platform focused on stock investors, using MongoDB Atlas and RESTful APIs. Admin moderation and analytics tools were provided for content and community management.</p>
+          <p><strong>Tech:</strong> Node.js, MongoDB Atlas, Express, React</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card">
+          <h5>FreezeBooking</h5>
+          <p class="small-muted">Techxi Solution LLP</p>
+          <p>Implemented REST APIs for booking flows with MySQL and deployed on AWS EC2. Used CloudFront to improve content delivery and load times.</p>
+          <p><strong>Tech:</strong> Node.js, MySQL, AWS EC2, CloudFront</p>
+        </div>
+
+        <div class="project-card">
+          <h5>GE Backend — Loyalty System</h5>
+          <p class="small-muted">Techxi Solution LLP</p>
+          <p>Designed and optimized backend services for point collection and redemption backed by PostgreSQL and AWS RDS.</p>
+          <p><strong>Tech:</strong> Node.js, PostgreSQL, AWS RDS</p>
+        </div>
+
+        <div class="project-card">
+          <h5>Hospital Management & Billing Systems</h5>
+          <p class="small-muted">Technoplat & Digital Computer System</p>
+          <p>Built backend systems for hospital operations and billing workflows using Node.js and MongoDB, deployed to AWS EC2 for scalability.</p>
+          <p><strong>Tech:</strong> Node.js, MongoDB, AWS EC2</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="container mt-4">
+    <div class="section-head">
+      <h3>Education</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>B.Tech — Computer Science & Engineering</h5>
+        <p class="small-muted">Modern Institute of Engineering and Technology, Kolkata — 2021</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Diploma — Computer Science & Technology</h5>
+        <p class="small-muted">Elite Polytechnic Institute, Mogra — 2018</p>
+      </div>
+    </div>
+    <div class="mt-3">
+      <h5>Higher Secondary</h5>
+      <p class="small-muted">Singur Mahamaya High School, Hooghly — 2015</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container mt-4 mb-5">
+    <div class="section-head">
+      <h3>Contact Me</h3>
     </div>
 
-    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img7">
-                <img src="images/gal77.jpg" alt="image">
+    <div class="row">
+      <div class="col-md-7">
+        <!-- simple contact form (static) -->
+        <form action="#" method="post" class="p-3 border rounded">
+          <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <div class="col form-group">
+              <label>Email</label>
+              <input class="form-control" type="email" name="email" placeholder="you@example.com" required>
             </div>
-
-            <div class="ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
+            <div class="col form-group">
+              <label>Phone</label>
+              <input class="form-control" type="text" name="phone" placeholder="+91" required>
             </div>
-            <div class="clearfix"></div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control" name="message" rows="4" placeholder="Write your message" required></textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-5">
+        <div class="card p-3">
+          <h6>Reach Out</h6>
+          <p><strong>Email:</strong> <a href="mailto:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a></p>
+          <p><strong>Phone:</strong> (+91) 801 304 6678</p>
+          <p><strong>Location:</strong> Ratanpur, Dihiratanpur, Singur, Hooghly, 712409</p>
+          <p><strong>GitHub:</strong> <a href="https://www.ranjanmaji.github.com">ranjanmaji.github.com</a></p>
         </div>
+      </div>
     </div>
-    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img8">
-                <img src="images/gal88.jpg" alt="image">
-            </div>
+  </section>
 
-            <div class=" ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container text-center">
+      <p>© <span id="year"></span> Ranjan Maji. All Rights Reserved.</p>
     </div>
-    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class=" w3ls-property-images w3-pop1-img9">
-                <img src="images/gal99.jpg" alt="image">
-            </div>
+  </footer>
 
-            <div class="ins-details">
-                <div class="ins-name">
-                    <h3>voluptatem accusantium doloremque</h3>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo</p>
-
-                </div>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <script src="js/jquery.filterizr.js"></script>
-
-    <!-- Kick off Filterizr -->
-    <script type="text/javascript">
-        $(function () {
-            //Initialize filterizr with default options
-            $('.filtr-container').filterizr();
-        });
-    </script>
-
-    <!-- contact -->
-    <div class="contact" id="contact">
-        <div class="container">
-            <div class="w3ls-heading">
-                <h3>Contact me</h3>
-            </div>
-            <div class="contact-w3ls">
-                <form action="#" method="post">
-                    <div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
-                        <input type="text" name="First Name" placeholder="Name" required="">
-                        <input type="email" class="email" name="Email" placeholder="Email" required="">
-                        <input type="text" name="Number" placeholder="Mobile Number" required="">
-                        <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
-                    </div>
-                    <div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
-                        <textarea name="Message" placeholder="Message" required=""></textarea>
-                        <input type="submit" value="Submit">
-                    </div>
-                    <div class="clearfix"> </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-    <!-- //contact -->
-    <!-- footer -->
-    <div class="w3l_footer">
-        <div class="container">
-
-            <div class="w3ls_footer_grids">
-
-                <div class="w3ls_footer_grid">
-                    <div class="col-md-4 w3ls_footer_grid_left">
-                        <div class="w3ls_footer_grid_leftl">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3ls_footer_grid_leftr">
-                            <h4>Location</h4>
-                            <p>Kolkata,WestBengal</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="col-md-4 w3ls_footer_grid_left">
-                        <div class="w3ls_footer_grid_leftl">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3ls_footer_grid_leftr">
-                            <h4>Email</h4>
-                            <a href="gmail:ranjanmaji906@gmail.com">ranjanmaji906@gmail.com</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="col-md-4 w3ls_footer_grid_left">
-                        <div class="w3ls_footer_grid_leftl">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3ls_footer_grid_leftr">
-                            <h4>Call Me</h4>
-                            <p>(+91) 801 304 6678</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3l_footer_pos">
-            <p>© 2022 C-Resume. All Rights Reserved | Design by Me</p>
-        </div>
-    </div>
-    <!-- //footer -->
-    <script src="js/bars.js"></script>
-    <!-- start-smoth-scrolling -->
-    <script src="js/SmoothScroll.min.js"></script>
-    <!-- text-effect -->
-    <script type="text/javascript" src="js/jquery.transit.js"></script>
-    <script type="text/javascript" src="js/jquery.textFx.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.test').textFx({
-                type: 'fadeIn',
-                iChar: 100,
-                iAnim: 1000
-            });
-        });
-    </script>
-    <!-- //text-effect -->
-    <!-- menu-js -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/menu.js"></script>
-    <!-- //menu-js -->
-
-
-    <script type="text/javascript" src="js/move-top.js"></script>
-
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-            });
-        });
-    </script>
-    <!-- start-smoth-scrolling -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-                var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear' 
-                };
-            */
-
-            $().UItoTop({ easingType: 'easeOutQuart' });
-
-        });
-    </script>
-
-
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
